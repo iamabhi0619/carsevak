@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contect</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="\css file\contect.css">
 </head>
 <header>
@@ -12,7 +12,7 @@
     </div>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="\index.html">Home</a></li>
             <li><a href="\html file\about.html">About</a></li>
             <li><a href="\html file\service.html">Services</a></li>
             <li><a href="\html file\contect.html">Contact</a></li>
@@ -20,6 +20,20 @@
     </nav>
 </header>
 <body>
-    <h1>Under Contruction</h1>
+    <form action="get.php" method="get">
+        <h3>Feel free to contact us..!!</h3>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" >
+        <label for="contect">Phone Number:</label>
+        <input type="text" id="contect" name="contect" >
+        <label for="palce">Place:</label>
+        <input type="text" id="Place" name="place" >
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" >
+        <label for="message">Message</label>
+        <textarea name="message" id="meaasge" cols="30" rows="10"></textarea>
+    </form>
 </body>
 </html>

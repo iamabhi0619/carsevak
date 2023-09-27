@@ -3,6 +3,8 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    text-align: center;
+    align-items: center;
 }
 header {
     background-color: rgba(41, 51, 92, 0.6);
@@ -29,4 +31,32 @@ nav a {
     color: #F3A717;
     font-weight: bold;
     font-size: 30px;
+}
+form{
+    background-color: rgba(168, 198, 136, 0.5);
+    font-size: 50px;
+    padding: 30px;
+    border-radius: 50px;
+    max-width: 800px;
+    color: rgb(243, 167, 18)
+
+}
+input{
+    height: 50px;
+    background-color: transparent;
+    font-size: 40px;
+}
+textarea{
+    background-color: transparent;
+    font-size: 30px;
+}
+label{
+    height: 50px;
+}
+h3{
+    display: block;
+    background-color: rgba(228,87,46,0.3);
+    border-radius: 50px;
+    padding: 20px;
+    color: rgb(243, 167, 18)
 }
