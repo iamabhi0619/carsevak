@@ -38,6 +38,7 @@ nav a {
     background-color: #f9f3cc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 10px;
+    margin-bottom: 20px;
     padding: 5px;
     border-radius: 5px;
     display: inline-block;
@@ -64,4 +65,7 @@ nav a {
 .product-description {
     margin: 10px 0;
     font-size: 20px;
+}
+.product:hover{
+    scale: 1.075;
 }
