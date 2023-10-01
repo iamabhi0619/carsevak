@@ -1,12 +1,11 @@
 body{
-    background-image: url(/photos/background.jpg);
+    background-image: url(/carsevak/photos/background.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
 }
 header {
     background-color: rgba(41, 51, 92, 0.6);
-  
     padding: 30px;
     display: flex;
     justify-content: space-between;
@@ -17,12 +16,12 @@ header {
     display: flex;
     align-items: center;
     margin-right: 10px;
-    height: 100px;
+    height: 80px;
     border-radius: 50%;
 }
 nav li {
     display: inline;
-    margin: 10px;
+    margin-left: 15px;
 }
 nav a {
     text-decoration: none;
@@ -31,34 +30,36 @@ nav a {
     font-size: 30px;
 }
 .container {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
 }
 
 .product {
-    background-color: #fff;
+    background-color: #f9f3cc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 10px;
     padding: 20px;
     border-radius: 5px;
     display: inline-block;
-    width: 30%;
+    width: 20%;
 }
 
 .product img {
     max-width: 100%;
-    height: auto;
+    border-radius: 10px;
 }
 
 .product-title {
     font-size: 20px;
     margin: 10px 0;
+    color: #8eaccd;
+    font-size: 25px;
 }
 
 .product-price {
     color: #e44d26;
-    font-size: 1.25rem;
+    font-size: 30px;
 }
 
 .product-description {
