@@ -39,10 +39,10 @@ nav a {
     background-color: #f9f3cc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 10px;
-    padding: 20px;
+    padding: 5px;
     border-radius: 5px;
     display: inline-block;
-    width: 20%;
+    width: 30%;
 }
 
 .product img {
@@ -54,12 +54,12 @@ nav a {
     font-size: 20px;
     margin: 10px 0;
     color: #8eaccd;
-    font-size: 25px;
+    font-size:larger;
 }
 
 .product-price {
     color: #e44d26;
-    font-size: 30px;
+    font-size: larger;
 }
 
 .product-description {
