@@ -43,6 +43,9 @@ nav a {
     border-radius: 5px;
     display: inline-block;
     max-width: 400px;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
 }
 
 .product img {
@@ -68,4 +71,5 @@ nav a {
 }
 .product:hover{
     scale: 1.075;
+    background-color: antiquewhite;
 }

@@ -1,0 +1,154 @@
+body{
+    background-image: url(/carsevak/photos/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    font-family: 'Monsterrat', sans-serif;
+    position: relative;
+}
+.checkout-container{
+  display: flex;
+}
+  
+  /* Container of photo and small discraption */
+  .small-detail {
+    background-color: rgba(168, 198, 134, 0.6);
+    background-position: center;
+    position: relative;
+    max-width: 450px;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 25px;
+  }
+#car-photo{
+  width: 400px;
+  margin: 10px;
+  border-radius: 25px;
+  border-style: double;
+  border-color: rgba(228, 87, 46, 0.9);
+  border-width: 7px;
+}
+  .text-box {
+    background: rgba(102,155,188,0.7);
+    border-radius: 25px;
+    border-color: rgba(228, 87, 46, 1);
+    border-style: solid;
+    border-width: 6px;
+    width: 400px;
+    margin-left: 5%;
+  }
+  /* Right Side of container */
+  
+  .right-side {
+    background-color: rgba(168, 198, 134, 0.6);
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 25px;
+  }
+  
+  .receipt {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px;
+  }
+  
+  .receipt-heading {
+    font-size: 1.6rem;
+    text-align: left;
+  }
+  
+  .table {
+    border-collapse: separate;
+    color: #64645f;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+  
+  .total td {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  
+  /* Payment Section */
+  
+  .payment-heading {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form-box {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .card-logo {
+    font-size: 2rem;
+  }
+  
+  .expires,
+  .form-box label {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  
+  .form-box input {
+    font-family: inherit;
+    padding: 0.5rem;
+    font: 30px;
+  }
+  
+  .form-box select {
+    padding: 0.5rem;
+  }
+  
+  .form-box #cvv {
+    width: 25%;
+  }
+  
+  .cvv-info:link,
+  .cvv-info:visited {
+    color: inherit;
+    text-decoration: underline;
+  }
+  
+  .cvv-info:hover,
+  .cvv-info:active {
+    color: #5f7986;
+    text-decoration: none;
+  }
+  
+  .btn {
+    background-color: #4c616b;
+    border: none;
+    border-radius: 8px;
+    color: #eff2f3;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #5f7986;
+    transition: ease-out 0.1s;
+  }
+  
+  .footer-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .form-box *:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.8rem rgba(139, 139, 107, 0.5);
+    border-radius: 8px;
+  }
+  
