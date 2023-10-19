@@ -1,5 +1,5 @@
 body{
-    background-image: url(/photos/background.jpg);
+    background-image: url(/carsevak/photos/background.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -32,7 +32,22 @@ nav a {
     font-weight: bold;
     font-size: 30px;
 }
-form{
+
+#title-head{
+    background-image: linear-gradient(to right, rgba(228,87,46,0.5), rgba(243, 167, 18,0.5));
+    padding: 5px;
+    border-radius: 100px;
+    border-color: azure;
+    border-style: solid;
+    margin: 20px;
+    color: aliceblue;
+}
+
+#title-head h1{
+    font-size: 50px;
+}
+
+/* form{
     background-color: rgba(168, 198, 136, 0.5);
     font-size: 50px;
     padding: 30px;
@@ -65,4 +80,4 @@ h3{
     padding: 10px,10px,10px,20px;
     margin: 10px;
     background-color: rgb(243, 167, 18);
-}
+} */

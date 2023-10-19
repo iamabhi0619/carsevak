@@ -11,8 +11,8 @@ body{
 }
 .checkout-container{
   display: flex;
+  overflow: scroll;
 }
-  
   /* Container of photo and small discraption */
   .small-detail {
     background-color: rgba(168, 198, 134, 0.6);
@@ -23,6 +23,7 @@ body{
     align-items: center;
     padding: 10px;
     border-radius: 25px;
+    height: 550px;
   }
 #car-photo{
   width: 400px;
