@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="/carsevak/css file/contect.css">
 </head>
@@ -19,67 +19,70 @@
         </ul>
     </nav>
 </header>
-<div id="title-head">
-    <h1 id="title">Feedback</h1>
-    <p id="description">Give us Your some time and help us to improve</p>
-</div>
 <body>
-    <form action="" id="feedback">
-        <label for="Name" id="name-label">Name:-</label>
-        <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+    <div id="mainbox">
+        <div id="title-head">
+            <h1 id="title">Feedback</h1>
+            <p id="description">Give us Your some time and help us to improve</p>
+        </div>
+        <form action="" id="feedback">
+            <label for="Name" id="name-label">Name:-</label>
+            <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+            <br>
+            <label for="Email" id="email-label">Email id:-</label>
+            <input type="text" id="email" name="email" placeholder="Please enter your email id" required>
+            <br>
+            <label for="Contact-Number" id="CN-lable">Contect Number:-</label>
+            <input type="tel" name="Contect" id="cnnumber" placeholder="Provide us your number" required>
+            <br>
+            <label for="Traveller-rating">Traveller rating:-</label>
+            <select name="option" id="Tr">
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="1">⭐</option>
+            </select>
+            <br>
+            <label for="website-experience">Website Experience:-</label>
+            <select name="option" id="WE">
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="1">⭐</option>
+            </select>
 
-        <label for="Email" id="email-label">Email id:-</label>
-        <input type="text" id="email" name="email" placeholder="Please enter your email id" required>
+            <Fieldset>
+                <legend>Do you like our Services</legend>
+                <input type="radio" id="radio1" name="Services" value="yes">
+                <label for="radio1">Yes</label>
+                <input type="radio" id="radio1" name="Services" value="no">
+                <label for="radio1">No</label>
+            </Fieldset>
 
-        <label for="Contact-Number" id="CN-lable">Contect Number:-</label>
-        <input type="tel" name="Contect" id="cnnumber" placeholder="Provide us your number" required>
+            <Fieldset>
+                <legend>Like the car</legend>
+                <input type="radio" id="radio2" name="like" value="yes">
+                <label for="radio2">Yes</label>
+                <input type="radio" id="radio1" name="like" value="no">
+                <label for="radio1">No</label>
+            </Fieldset>
 
-        <label for="Traveller-rating">Traveller rating:-</label>
-        <select name="option" id="Tr">
-            <option value="5">⭐⭐⭐⭐⭐</option>
-            <option value="4">⭐⭐⭐⭐</option>
-            <option value="3">⭐⭐⭐</option>
-            <option value="2">⭐⭐</option>
-            <option value="1">⭐</option>
-        </select>
-
-        <label for="website-experience">Website Experience:-</label>
-        <select name="option" id="WE">
-            <option value="5">⭐⭐⭐⭐⭐</option>
-            <option value="4">⭐⭐⭐⭐</option>
-            <option value="3">⭐⭐⭐</option>
-            <option value="2">⭐⭐</option>
-            <option value="1">⭐</option>
-        </select>
-
-        <Fieldset>
-            <legend>Do you like our Services</legend>
-            <input type="radio" id="radio1" name="Services" value="yes">
-            <label for="radio1">Yes</label>
-            <input type="radio" id="radio1" name="Services" value="no">
-            <label for="radio1">No</label>
-        </Fieldset>
-
-        <Fieldset>
-            <legend>Do you like the car</legend>
-            <input type="radio" id="radio2" name="like" value="yes">
-            <label for="radio2">Yes</label>
-            <input type="radio" id="radio1" name="like" value="no">
-            <label for="radio1">No</label>
-        </Fieldset>
-
-        <Fieldset>
-            <legend>Satisfied with our Website Experience</legend>
-            <input type="radio" id="radio3" name="Experience" value="yes">
-            <label for="radio3">Yes</label>
-            <input type="radio" id="radio3" name="Experience" value="no">
-            <label for="radio3">No</label>
-        </Fieldset>
-
-        <label for="comments">Additional comments:</label>
-        <textarea id="comments" name="comments" placeholder="Put your comments"></textarea>
-
-        <button type="submit" id="submit">Submit</button>
-    </form>
+            <Fieldset>
+                <legend>Satisfied with Website</legend>
+                <input type="radio" id="radio3" name="Experience" value="yes">
+                <label for="radio3">Yes</label>
+                <input type="radio" id="radio3" name="Experience" value="no">
+                <label for="radio3">No</label>
+            </Fieldset>
+            <div id="comment">
+                <label for="comments">Additional comments:</label>
+                <textarea id="comments" name="comments" placeholder="Put your comments"></textarea>
+            </div>
+            <br>
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>

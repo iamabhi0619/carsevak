@@ -33,51 +33,83 @@ nav a {
     font-size: 30px;
 }
 
+#mainbox{
+    background-color: aliceblue;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 20px;
+    border-radius: 50px;
+}
 #title-head{
-    background-image: linear-gradient(to right, rgba(228,87,46,0.5), rgba(243, 167, 18,0.5));
-    padding: 5px;
+    background-image: linear-gradient(to right, rgba(228,87,46,0.6), rgba(243, 167, 18,0.8));
+    padding: 25px;
     border-radius: 100px;
     border-color: azure;
     border-style: solid;
-    margin: 20px;
+    margin: 10px;
     color: aliceblue;
 }
 
 #title-head h1{
-    font-size: 50px;
+    font-size: 60px;
+    margin: 0px;
 }
 
-/* form{
-    background-color: rgba(168, 198, 136, 0.5);
-    font-size: 50px;
-    padding: 30px;
-    border-radius: 50px;
-    max-width: 800px;
-    color: rgb(243, 167, 18)
-
-}
-input{
-    height: 50px;
-    background-color: transparent;
-    font-size: 40px;
-}
-textarea{
-    background-color: transparent;
+#title-head p{
     font-size: 30px;
+    margin: 0px;
+    font-style: italic;
+    text-decoration: underline dotted;
+}
+#feedback{
+    box-shadow: 0px 0px 20px rgba(102, 155, 188, 1);
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 25px;
 }
 label{
-    height: 50px;
+    display: inline-block;
+    margin-top: 20px;
 }
-h3{
-    display: block;
-    background-color: rgba(228,87,46,0.3);
-    border-radius: 50px;
-    padding: 20px;
-    color: rgb(243, 167, 18)
+input, select, textarea{
+    background-color: rgba(102, 155, 188, 0.1);
+    border-style: solid;
+    border-radius: 5px;
+    height: 27px;
+    font-size: 20px;
 }
-#bsubmit{
-    color:white;
-    padding: 10px,10px,10px,20px;
-    margin: 10px;
-    background-color: rgb(243, 167, 18);
-} */
+
+fieldset{
+    border: 0.5px dotted rgba(102, 155, 188, 1);
+    padding: 5px;
+    margin:20%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+textarea{
+    height: 80px;
+    position: relative;
+}
+button{
+    background-color: rgba(41, 51, 92, 1);
+    font-size: 30px;
+    color: aliceblue;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    margin: 10px 0px 0px 0px;
+    transition: all ease 0.4s;
+    text-align: center;
+    cursor: pointer;
+}
+#comment label{
+    vertical-align: top;
+}
+textarea:focus, input:focus, select:focus{
+    background-color: rgba(102, 155, 188, 0.3);
+}
+button:hover{
+    scale: 1.1;
+}
