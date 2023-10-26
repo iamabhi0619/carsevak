@@ -6,7 +6,7 @@ body{
 }
 header {
     background-color: rgba(41, 51, 92, 0.6);
-    padding: 30px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,12 +16,23 @@ header {
     display: flex;
     align-items: center;
     margin-right: 10px;
-    height: 80px;
+    height: 150px;
     border-radius: 50%;
+}
+nav ul{
+    margin-right: 10px;
 }
 nav li {
     display: inline;
     margin-left: 15px;
+}
+.logo img:hover{
+    scale: 1.05;
+}
+nav a:hover{
+    color: #BEF0FF;
+    text-decoration: underline;
+    transition: all ease 1.5;
 }
 nav a {
     text-decoration: none;
