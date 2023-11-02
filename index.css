@@ -121,7 +121,7 @@ nav ul li a:hover::after{
     bottom: 8%;
 }
 #social-media img{
-    width: 30px;
+    /* width: 30px; */
     display: block;
     margin: 25px 5px;
 }
