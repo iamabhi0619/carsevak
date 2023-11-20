@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive 3D Carousel Slider with Swipe and Auto-Rotation.</title>
+  <style>
+    body {
+      background: #f5f5f5;
+      padding: 70px 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .container {
+      margin: 0 auto;
+      width: 350px;
+      height: 200px;
+      position: relative;
+      perspective: 1000px;
+    }
+    
+    .carousel {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+      user-select: none; /* Disable text selection */
+    }
+    .carousel div {
+      transform-style: preserve-3d;
+    }
+    
+    .item {
+      display: block;
+      position: absolute;
+      background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+      width: 350px;
+      height: 200px;
+      line-height: 200px;
+      font-size: 2em;
+      text-align: center;
+      color: #333;
+      opacity: 0.8;
+      border-radius: 10px;
+      transition: transform 1s, opacity 0.5s;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .slide1 {
+      transform: rotateY(0deg) translateZ(250px);
+    }
+    .slide1 .item {
+      background: linear-gradient(to bottom, #e84c3d, #f66d49);
+      color: #fff; opacity:.93;
+    }
+    .slide2 {
+      transform: rotateY(60deg) translateZ(250px) rotateY(-60deg);
+    }
+    .slide2 .item {
+      background: linear-gradient(to bottom, #417ebf, #0072bc);
+      color: #fff; opacity:.93;
+    }
+    .slide3 {
+      transform: rotateY(120deg) translateZ(250px) rotateY(-120deg);
+    }
+    .slide3 .item {
+      background: linear-gradient(to bottom, #38c172, #36a165);
+      color: #fff; opacity:.93;
+    }
+    .slide4 {
+      transform: rotateY(180deg) translateZ(250px) rotateY(-180deg);
+    }
+    .slide4 .item {
+      background: linear-gradient(to bottom, #f0932b, #ed7600);
+      color: #fff; opacity:.93;
+    }
+    .slide5 {
+      transform: rotateY(240deg) translateZ(250px) rotateY(-240deg);
+    } 
+    .slide5 .item {
+      background: linear-gradient(to bottom, #9b59b6, #610093);
+      color: #fff; opacity:.93;
+    }
+    .slide6 {
+      transform: rotateY(300deg) translateZ(250px) rotateY(-300deg);
+    }
+    .slide6 .item {
+      background: linear-gradient(to bottom, #bf935a, #8c6239);
+      color: #fff; opacity:.93;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="carousel">
+      <div class="slide1">
+        <div class="item">Slide 1</div>
+      </div>
+      <div class="slide2">
+        <div class="item">Slide 2</div>
+      </div>
+      <div class="slide3">
+        <div class="item">Slide 3</div>
+      </div>
+      <div class="slide4">
+        <div class="item">Slide 4</div>
+      </div>
+      <div class="slide5">
+        <div class="item">Slide 5</div>
+      </div>
+      <div class="slide6">
+        <div class="item">Slide 6</div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+    var carousel = $(".carousel"),
+        items = $(".item"),
+        currdeg = 0,
+        intervalId = null,
+        rotationInProgress = false;
+
+    var mouseDownX = 0;
+    var mouseUpX = 0;
+
+    $(".carousel").on("mousedown", function (event) {
+      mouseDownX = event.pageX;
+      stopRotation();
+    });
+
+    $(".carousel").on("mousemove", function (event) {
+      if (mouseDownX !== 0) {
+        mouseUpX = event.pageX;
+      }
+    });
+
+    $(".carousel").on("mouseup", function (event) {
+      if (mouseDownX !== 0) {
+        handleSwipe();
+      }
+      mouseDownX = 0;
+      mouseUpX = 0;
+      startRotation();
+    });
+
+    function handleSwipe() {
+      var swipeThreshold = 50; // Minimum swipe distance required to trigger a rotation
+
+      if (mouseUpX - mouseDownX > swipeThreshold) {
+        // Swipe right
+        rotate({ data: { d: "p" } });
+      } else if (mouseDownX - mouseUpX > swipeThreshold) {
+        // Swipe left
+        rotate({ data: { d: "n" } });
+      }
+    }
+    
+    function rotate(e) {
+      if (rotationInProgress) {
+        return; // Ignore rotation request if it's already in progress
+      }
+
+      rotationInProgress = true;
+
+      if (e.data.d == "n") {
+        currdeg = currdeg - 60;
+      }
+      if (e.data.d == "p") {
+        currdeg = currdeg + 60;
+      }
+      carousel.css({
+        "-webkit-transform": "rotateY(" + currdeg + "deg)",
+        "-moz-transform": "rotateY(" + currdeg + "deg)",
+        "-o-transform": "rotateY(" + currdeg + "deg)",
+        "transform": "rotateY(" + currdeg + "deg)"
+      });
+      items.css({
+        "-webkit-transform": "rotateY(" + (-currdeg) + "deg)",
+        "-moz-transform": "rotateY(" + (-currdeg) + "deg)",
+        "-o-transform": "rotateY(" + (-currdeg) + "deg)",
+        "transform": "rotateY(" + (-currdeg) + "deg)"
+      });
+
+      setTimeout(function() {
+        rotationInProgress = false;
+      }, 1000); // Set rotationInProgress to false after 1 second to allow rotation to complete
+    }
+    
+    function startRotation() {
+      if (intervalId === null) {
+        intervalId = setInterval(function() {
+          rotate({ data: { d: "n" } });
+        }, 10000);
+      }
+    }
+    
+    function stopRotation() {
+      if (intervalId !== null) {
+        clearInterval(intervalId);
+        intervalId = null;
+      }
+    }
+
+    // Start the rotation initially
+    startRotation();
+
+    // Detect visibility change and stop/start rotation accordingly
+    document.addEventListener("visibilitychange", function() {
+      if (document.visibilityState === "hidden") {
+        stopRotation();
+      } else if (document.visibilityState === "visible") {
+        startRotation();
+      }
+    });
+  </script>
+</body>
+</html>

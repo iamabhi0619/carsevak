@@ -15,7 +15,8 @@
                 <li><a href="/carsevak/html file/contect.html">contact</a></li>
                 <li><a href="/carsevak/html file/service.html">Service</a></li>
             </ul>
-            <img src="/carsevak/image/cart.svg" class="cart-icon">
+            <img src="/carsevak/image/cart.svg" class="cart-icon" style="margin-right: 30px;">
+            <img src="/carsevak/image/profile-user.png" class="user-icon">
         </nav>
         <div id="text-box">
             <p>TAKE-AND-GO</p>
@@ -23,7 +24,7 @@
             <h3>Drive Your Dreams, One Rental at a Time.</h3>
             <div id="down-row">
                 <a href="/carsevak/product/index.html">Explore<span>&#x27F6;</span></a>
-                <a href="">Connect<span>&#x27F6;</span></a>
+                <a href="/carsevak/html file/contect.html">Connect<span>&#x27F6;</span></a>
             </div>
         </div>
         <div id="social-media">
@@ -32,5 +33,78 @@
             <a href=""><img src="image/x.svg" width="30px"></a>
         </div>
     </div>
+    <!-- Add this div at the end of your body section -->
+    <div id="signin-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Sign In</h2>
+            <form id="signin-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button type="button" onclick="signIn()">Sign In</button>
+            </form>
+            <p id="signin-message"></p>
+        </div>
+    </div>
 </body>
+<script>
+    // Add this to your existing script or in a new file
+document.addEventListener("DOMContentLoaded", function () {
+    const signinModal = document.getElementById("signin-modal");
+    const signinForm = document.getElementById("signin-form");
+    const signinMessage = document.getElementById("signin-message");
+
+    // Function to open the modal
+    function openModal() {
+        signinModal.style.display = "block";
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        signinModal.style.display = "none";
+        signinForm.reset(); // Clear the form when closing
+        signinMessage.textContent = ""; // Clear the message
+    }
+
+    // Function to handle sign-in
+    function signIn() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Perform actual sign-in logic here
+        // For demonstration purposes, let's assume a simple check
+        if (username === "demo" && password === "password") {
+            signinMessage.textContent = "Sign-in successful!";
+            // You can add additional logic here, such as redirecting the user
+            // or performing other actions upon successful sign-in.
+        } else {
+            signinMessage.textContent = "Invalid username or password.";
+        }
+    }
+
+    // Event listener for the user icon
+    const userIcon = document.querySelector(".user-icon");
+    userIcon.addEventListener("click", openModal);
+
+    // Event listener for closing the modal
+    const closeButtons = document.querySelectorAll(".close");
+    closeButtons.forEach((button) => {
+        button.addEventListener("click", closeModal);
+    });
+
+    // Event listener for the modal background (close when clicking outside the modal)
+    window.addEventListener("click", function (event) {
+        if (event.target === signinModal) {
+            closeModal();
+        }
+    });
+});
+</script>
 </html>
