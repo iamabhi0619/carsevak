@@ -1,8 +1,9 @@
 body{
-    background-image: url(/photos/background.jpg);
+    background-image: url(/carsevak/photos/background.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    transition: all ease 0.2s;
 }
 header {
     background-color: rgba(41, 51, 92, 0.6);
@@ -37,4 +38,37 @@ nav a:hover{
     color: #BEF0FF;
     text-decoration: underline;
     transition: all ease 1.5;
+}
+#title{
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 50px;
+    font-size: 60px;
+    padding: 5px;
+    /* color: #739bd0; */
+}
+#main-box{
+    display: flex;
+    transition: all ease 0.2s;
+}
+#place{
+    background-color: aliceblue;
+    width: 250px;
+    display: inline;
+    text-align: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 15px;
+    transition: all ease 0.5s;
+}
+#place img{
+    width: 200px;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: 0px 0px 6px 1px #79B9EE;
+    margin: 5px;
+}
+#place:hover{
+    scale: 1.03;
+    border-radius: 30px;
 }
