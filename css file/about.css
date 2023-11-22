@@ -1,4 +1,4 @@
-body{
+/* body{
     background-image: url(/carsevak/photos/background.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -67,4 +67,170 @@ nav a:hover{
     margin: 5px;
     font-size: 35px;
     text-decoration: wavy;
+} */
+
+body{
+    background-image: url(/carsevak/photos/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
+header {
+    background-color: rgba(41, 51, 92, 0.6);
+  
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+}
+.logo img {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    height: 100px;
+    border-radius: 50%;
+}
+nav li {
+    display: inline;
+    margin: 10px;
+}
+nav a {
+    text-decoration: none;
+    color: #F3A717;
+    font-weight: bold;
+    font-size: 30px;
+}
+#about_intial
+{
+    font-size: 25px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    color:#133072;
+}
+
+#profile{
+    padding: 20px;
+    padding-left: 30px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    overflow: hidden;
+    background-color: rgba(243, 167, 18,0.9);
+}
+#image img{
+    border-radius: 100px;
+    height: 200px;
+    padding-top: 10px;
+}
+#About{
+    color: white;
+    padding-left: 40px;
+    font-size:17px;
+}
+
+#image img:hover{scale: 1.05;}
+#profile:hover{scale: 1.009;}
+
+#profile_2{
+    display: inline-flex;
+    background-color: #133072;
+    justify-content: space-between;
+    overflow: hidden;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 20px;
+    padding-right: 30px;
+    align-items: center;
+}
+
+#image_2 img{
+    border-radius: 100px;
+    height: 200px;
+    padding-top: 10px;
+}
+
+#About_2
+{
+    color: white;
+    padding-right: 40px;
+    font-size:17px;
+}
+
+#image_2 img:hover{scale: 1.05;}
+#profile_2:hover{scale: 1.009;}
+
+
+/* #profile_3
+{
+    display: inline-flex;
+    background-color: #d5e6f7;
+    justify-content: space-between;
+    padding: 20px;
+    padding-left: 30px;
+    align-items: center;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    overflow: hidden;
+} */
+
+/* #image_3 img
+{
+    border-radius: 100px;
+    height: 200px;
+    padding-top: 10px;
+} */
+
+/* #About_3
+{
+    color: rgb(6, 0, 0);
+    padding-left: 20px;
+}
+
+#image_3 img:hover{scale: 1.05;}
+#profile_3:hover{scale: 1.009;} */
+
+
+#profile_3{
+    display: flex;
+    background-color:grey;
+    justify-content: space-between;
+    overflow: hidden;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 20px;
+    padding-right: 30px;
+}
+
+#image_3 img{
+    border-radius: 300px;
+    height: 200px;
+    padding-top: 10px;
+}
+
+#About_3
+{
+    color: white;
+    padding-left: 20px;
+}
+
+#image_3 img:hover{scale: 1.05;}
+#profile_3:hover{scale: 1.009;}
+
+/* #last_text{
+    padding: 20px;
+    padding-left: 30px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px; */
+    /* overflow: hidden;
+    background-color: rgba(243, 167, 18,0.9);
+     align-self: center;
+}
+#team{
+
+} */ 
